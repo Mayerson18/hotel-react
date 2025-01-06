@@ -2,40 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getReservations } from "../utils/supabase";
 
-// Datos simulados
-const mockReservations = [
-  {
-    id: 1,
-    dni: "12345678",
-    type_doc: "DNI",
-    name: "Juan Pérez",
-    cel: "987654321",
-    email: "juan.perez@example.com",
-    package: "Premium",
-    created_at: "2025-01-05",
-  },
-  {
-    id: 2,
-    dni: "87654321",
-    type_doc: "Pasaporte",
-    name: "Ana López",
-    cel: "123456789",
-    email: "ana.lopez@example.com",
-    package: "Económico",
-    created_at: "2025-01-04",
-  },
-  {
-    id: 3,
-    dni: "11223344",
-    type_doc: "Cédula",
-    name: "Carlos García",
-    cel: "564738291",
-    email: "carlos.garcia@example.com",
-    package: "Estándar",
-    created_at: "2025-01-03",
-  },
-];
-
 function AdminReservations() {
   const [reservations, setReservations] = useState([]);
 
