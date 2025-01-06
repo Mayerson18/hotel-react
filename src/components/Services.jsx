@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Services.css";
+import { saveReservation } from "../utils/supabase";
 
 const services = [
   { id: 1, title: "Habitación Sencilla", description: "Perfecta para viajeros individuales." },
@@ -25,6 +26,19 @@ const Services = () => {
     event.preventDefault();
     // Aquí puedes manejar el envío del formulario
     alert("Datos guardados correctamente");
+
+    const reservation = {
+      package: selectedService.title,
+      type_doc: event.target[0].value,
+      dni: event.target[1].value,
+      name: event.target[2].value,
+      cel: event.target[3].value,
+      email: event.target[4].value,
+    };
+
+    console.log(reservation);
+
+    saveReservation(reservation);
     handleCloseModal();
   };
 

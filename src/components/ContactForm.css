@@ -39,13 +39,13 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #007BFF;
+  border-color: rgb(8, 45, 85);
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .submit-button {
-  background-color: #007BFF;
+  background-color: rgb(8, 45, 85);
   color: #fff;
   border: none;
   padding: 0.75rem 1.5rem;
